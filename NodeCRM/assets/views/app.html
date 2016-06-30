@@ -1,0 +1,88 @@
+<header class="navbar navbar-fixed-top">
+    <div class="navbar-branding">
+        <a class="navbar-brand" href="">
+           CRM <!--<img src="assets/images/logo/logo.png" height="30"  />-->
+        </a>
+        <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!--<ul class="nav navbar-nav">
+            <li>
+                <a class=""><span class=""></span></a>
+            </li>
+        </ul>-->
+        <ul class="nav navbar-nav navbar-right">
+            <!--<li>
+                <form class="navbar-form navbar-left navbar-search" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." value="Search...">
+                    </div>
+                </form>
+            </li>-->
+            <li class="dropdown">
+                <a class="dropdown-toggle fw600 p15 text-capitalize" data-toggle="dropdown">
+                   
+                    {{userinfo.UserName}} 
+                    <span class="caret caret-tp hidden-xs"></span>
+                </a>
+                <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">                    
+                    <li class="list-group-item">
+                        <a ng-click="LogOut()" class="animated animated-short fadeInUp">
+                            <span class="fa fa-power-off"></span> Logout
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</header>
+
+<aside id="sidebar_left" class="nano nano-primary affix">
+    <div class="sidebar-left-content nano-content">
+        <ul class="nav sidebar-menu" >
+            <li class="sidebar-label pt20">Data & Analysis </li>
+            <!--<li ui-sref-active="active">
+                <a ui-sref="app.dashboard">
+                    <span class="fa fa-tachometer"></span>
+                    <span class="sidebar-title">Dashboard</span>
+                </a>
+            </li>-->
+            <li ui-sref-active="active">
+                <a ui-sref="app.customer">
+                    <span class="fa fa-users"></span>
+                    <span class="sidebar-title">Customers</span>
+                </a>
+            </li>
+        </ul>
+        <div class="sidebar-toggle-mini">
+            <a href="">
+                <span class="fa fa-sign-out"></span>
+            </a>
+        </div>
+    </div>
+</aside>
+<section id="content_wrapper">
+    <section ui-view></section>
+    <footer id="content-footer" style="z-index:9999">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="footer-legal"> <i class="fa fa-copyright" aria-hidden="true"></i></span>
+            </div>
+            <div class="col-md-6 text-right">
+
+                <a href="#content" class="footer-return-top">
+                    <span class="fa fa-arrow-up"></span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        "use strict";
+        Core.init();
+        Demo.init();
+    });
+</script>

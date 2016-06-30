@@ -1,0 +1,5 @@
+﻿{
+    "SelectListValues": [ 25, 50, 100, 500 ],
+    "DefaultSelected": 100,
+    "MaxPageButtons" :  5
+}

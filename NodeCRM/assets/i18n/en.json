@@ -1,0 +1,84 @@
+{
+  "dashboard": {
+    "WELCOME": "Welcome to {{appName}}"
+  },
+  "topbar": {
+    "messages": {
+    	"MAIN": "Messages",
+      	"HEADER": "Unread messages",
+      	"SEEALL": "See All"
+    },
+    
+    "activities": {
+      "MAIN": "Activities",
+      "HEADER": "You have new notifications",
+      "SEEALL": "See All"
+    },
+    "user": {
+      "PROFILE": "My Profile",
+      "CALENDAR" : "My Calendar",
+      "MESSAGES" : "My Messages",
+      "LOCKSCREEN" : "Lock Screen",
+      "LOGOUT" : "Log Out"
+    }
+  },
+  "offsidebar": {
+    "chat": {
+      "ONLINE": "On-Line",
+      "OFFLINE": "Off-Line",
+      "BACK": "Back",
+      "SEND" : "Send",
+      "PLACEHOLDER": "Message"
+    },
+    "favorites": {
+      "MAIN": "Favorites"
+    },
+    "settings": {
+      "MAIN": "General Settings",
+      "NOTIFICATIONS": "Enable Notifications",
+      "SHOWEMAIL": "Show your E-mail",
+      "SHOWUSERS": "Show Offline Users",
+      "EMAILALERT": "E-mail Alerts",
+      "SMSALERT": "SMS Alerts",
+      "SAVE" : "Save Changes"     
+    }  
+  },
+  "sidebar": {
+    "heading": {
+      "NAVIGATION": "Main Navigation",
+      "FEATURES": "Core Features",
+      "DOCUMENTATION": "Documentation"
+    },
+    "search": {
+      "PLACEHOLDER": "Search..."
+    },
+    "nav": {
+      "dashboard": {
+        "MAIN": "Dashboard"
+      },
+      "organizations": {
+        "MAIN":  "Organizations"
+      },
+      "users": {
+        "MAIN": "Users",
+        "Superadmin": "Create Admin",
+        "Energycoach": "Create Energy Coach",
+        "Accountadmin": "Create Account Admin",
+        "User": "Create User"
+      }
+    }
+  },
+  "footer": {
+    "copyright": {
+    	"MAIN": "Copyright",
+      	"MESSAGE": "All rights reserved"
+    }
+  },
+  "setting": {
+  	"MAIN" : "Style Selector",
+    "FIXEDHEADER": "Fixed header",
+    "FIXEDSIDEBAR": "Fixed sidebar",
+    "CLOSEDSIDEBAR": "Closed sidebar",
+    "FIXEDFOOTER": "Fixed footer"
+  }
+}

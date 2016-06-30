@@ -1,0 +1,1 @@
+﻿var _configRootUrl = "http://localhost:1783";

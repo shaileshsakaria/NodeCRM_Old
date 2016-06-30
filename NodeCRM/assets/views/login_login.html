@@ -1,0 +1,123 @@
+
+
+<style>
+    .mendatory {
+        color: red;
+    }
+
+    body {
+        min-height: inherit !important;
+    }
+
+    .loginClass {
+        left: 50%;
+        margin-right: -50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, 50%);
+        -moz-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+        -o-transform: translate(-50%,50%);
+        -webkit-transform: translate(-50%, 50%);
+        width: 500px;
+    }
+</style>
+<body class="external-page sb-l-c sb-r-c" style="min-height: inherit !important;">
+    <div id="main" class="animated fadeIn" ng-controller="loginCtrl">
+        <section id="" class="loginClass">
+            <section id="content" style="padding:0">
+
+                <div class="admin-form theme-info mw500" id="login1">
+
+                    <div class="panel panel-info"  cg-busy="cgPromise">
+                        <form id="loginform" name="loginform" novalidate>
+                            <div class="panel-body bg-light p30">
+                                <div class="row">
+                                    <div class="col-sm-12 pr30">
+                                        <div class="section">
+                                            <label for="username" class="field-label text-muted fs18 mb10">Email or Username</label>
+                                            <label for="username" class="field prepend-icon">
+                                                <input type="text" name="username" id="username" required ng-model="Email" class="gui-input" placeholder="Enter Username or EmailID">
+                                                <label for="username" class="field-icon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </label>
+                                            </label>
+                                        </div>
+                                        <div class="section">
+                                            <label for="username" class="field-label text-muted fs18 mb10">Password</label>
+                                            <label for="password" class="field prepend-icon">
+                                                <input type="password" name="password" id="password" required ng-model="Password" class="gui-input" placeholder="Enter password">
+                                                <label for="password" class="field-icon">
+                                                    <i class="fa fa-lock"></i>
+                                                </label>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="panel-footer clearfix p10 ph15">
+                                <button type="submit" class="button btn-primary mr10 pull-right" ng-click="login()">Sign In</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--<div class="login-links text-center">
+                        <p>
+                            <a ui-sref="ForgotPassword" class="active" title="Forgot Password">Forgot Password?</a>
+                        </p>
+                        <p>
+                            Haven't yet Registered?
+                            <a ui-sref="signup" title="Sign Up">Sign up here</a>
+                        </p>
+                    </div>-->
+                </div>
+
+            </section>
+        </section>
+    </div>
+</body>
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        $("#loginform").validate({
+            errorClass: "state-error",
+            validClass: "state-success",
+            errorElement: "em",
+            rules: {
+                username: {
+                    required: true
+                },
+                password: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 16
+                }
+            },
+            messages: {
+                username: {
+                    required: 'Enter user name'
+                },
+                password: {
+                    required: 'Please enter a password'
+                }
+            },
+
+            highlight: function (element, errorClass, validClass) {
+                $(element).closest('.field').addClass(errorClass).removeClass(validClass);
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                $(element).closest('.field').removeClass(errorClass).addClass(validClass);
+            },
+            errorPlacement: function (error, element) {
+                if (element.is(":radio") || element.is(":checkbox")) {
+                    element.closest('.option-group').after(error);
+                } else {
+                    error.insertAfter(element.parent());
+                }
+            }
+        });
+    });
+</script>
+
+
